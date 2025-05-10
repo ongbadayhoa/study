@@ -49,63 +49,55 @@ Tài liệu này tổng hợp tất cả các màn hình, popup và nội dung t
 ```mermaid
 flowchart TD
     subgraph StreakFlow[Flow làm bài Streak]
-        S1[Danh sách chuỗi\nStreak] --> S2[Làm bài\n3 câu]
-        S2 --> S3[Kết quả\nĐiểm + Chempoint + Chuỗi]
-        S3 --> S4[Giải thích\nDuy trì chuỗi]
-        S2 --> SP1{{Popup: Duy trì chuỗi}}:::popup
-        S3 --> SP2{{Popup: Nhận chempoint}}:::popup
-        S3 --> SP3{{Popup: Chuỗi streak}}:::popup
-        style S1 fill:#e8f5e9,stroke:#2e7d32
+        S1[Danh sách chuỗi<br>Streak] --> S2[Làm bài<br>3 câu]
+        S2 --> S3[Kết quả<br>Điểm + Chempoint + Chuỗi]
+        S3 --> S4[Giải thích<br>Duy trì chuỗi]
+        S2 --> SP1{{Popup: Duy trì chuỗi}}
+        S3 --> SP2{{Popup: Nhận chempoint}}
+        S3 --> SP3{{Popup: Chuỗi streak}}
     end
-    classDef popup stroke:#ff9800,stroke-width:2px;
 ```
 
 ### 2. Sơ Đồ Cho Homework
 ```mermaid
 flowchart TD
     subgraph HomeworkFlow[Flow làm bài Homework]
-        H1[Danh sách bài tập\ntheo lộ trình] --> H2[Chọn mức độ\nDễ/TB/Khó]
-        H2 --> H3[Làm bài\n10 câu]
-        H3 --> H4[Kết quả\nĐiểm + Chempoint]
-        H4 --> H5[Giải thích\nLink video]
-        H1 --> HP1{{Popup: Xác nhận làm lại}}:::popup
-        H4 --> HP2{{Popup: Nhận chempoint}}:::popup
-        H4 --> HP3{{Popup: Gợi ý luyện tập}}:::popup
-        H4 --> HP4{{Popup: Xem video liên quan}}:::popup
-        style H1 fill:#fff3e0,stroke:#e65100
+        H1[Danh sách bài tập<br>theo lộ trình] --> H2[Chọn mức độ<br>Dễ/TB/Khó]
+        H2 --> H3[Làm bài<br>10 câu]
+        H3 --> H4[Kết quả<br>Điểm + Chempoint]
+        H4 --> H5[Giải thích<br>Link video]
+        H1 --> HP1{{Popup: Xác nhận làm lại}}
+        H4 --> HP2{{Popup: Nhận chempoint}}
+        H4 --> HP3{{Popup: Gợi ý luyện tập}}
+        H4 --> HP4{{Popup: Xem video liên quan}}
     end
-    classDef popup stroke:#ff9800,stroke-width:2px;
 ```
 
 ### 3. Sơ Đồ Cho Test
 ```mermaid
 flowchart TD
     subgraph TestFlow[Flow làm bài Test]
-        T1[Danh sách\nbài thi thử] --> T2[Hướng dẫn\nluật thi]
-        T2 --> T3[Làm bài\n60 câu có timer]
-        T3 --> T4[Kết quả\nĐiểm + Chempoint + Phân tích]
-        T4 --> T5[Giải thích\nPhân tích điểm mạnh/yếu]
-        T3 --> TP1{{Popup: Sắp hết thời gian}}:::popup
-        T4 --> TP2{{Popup: Nhận chempoint}}:::popup
-        T4 --> TP3{{Popup: Phân tích kết quả}}:::popup
-        style T1 fill:#f3e5f5,stroke:#6a1b9a
+        T1[Danh sách<br>bài thi thử] --> T2[Hướng dẫn<br>luật thi]
+        T2 --> T3[Làm bài<br>60 câu có timer]
+        T3 --> T4[Kết quả<br>Điểm + Chempoint + Phân tích]
+        T4 --> T5[Giải thích<br>Phân tích điểm mạnh/yếu]
+        T3 --> TP1{{Popup: Sắp hết thời gian}}
+        T4 --> TP2{{Popup: Nhận chempoint}}
+        T4 --> TP3{{Popup: Phân tích kết quả}}
     end
-    classDef popup stroke:#ff9800,stroke-width:2px;
 ```
 
 ### 4. Sơ Đồ Cho Practice
 ```mermaid
 flowchart TD
     subgraph PracticeFlow[Flow làm bài Practice]
-        P1[Danh sách\ntheo chủ đề] --> P2[Chọn chủ đề\ndạng bài]
-        P2 --> P3[Làm bài\nKhông giới hạn]
-        P3 --> P4[Kết quả từng câu\nGiải thích ngay]
-        P4 --> P5[Gợi ý\nbài tiếp theo]
-        P3 --> PP1{{Popup: Giải thích câu}}:::popup
-        P4 --> PP2{{Popup: Gợi ý dạng bài khác}}:::popup
-        style P1 fill:#e1f5fe,stroke:#01579b
+        P1[Danh sách<br>theo chủ đề] --> P2[Chọn chủ đề<br>dạng bài]
+        P2 --> P3[Làm bài<br>Không giới hạn]
+        P3 --> P4[Kết quả từng câu<br>Giải thích ngay]
+        P4 --> P5[Gợi ý<br>bài tiếp theo]
+        P3 --> PP1{{Popup: Giải thích câu}}
+        P4 --> PP2{{Popup: Gợi ý dạng bài khác}}
     end
-    classDef popup stroke:#ff9800,stroke-width:2px;
 ```
 
 ## IV. Chi Tiết Từng Màn Hình Và Popup
@@ -224,12 +216,12 @@ flowchart TD
 flowchart TD
     Start([Bắt đầu làm bài]) --> Type{Loại bài tập?}
     
-    Type -- Practice --> P1[Không tính điểm\nKhông chempoint]
+    Type -- Practice --> P1[Không tính điểm<br>Không chempoint]
     P1 --> P2[Kết thúc]
     
     Type -- Streak/Homework/Test --> S1{Lần làm thứ mấy?}
     
-    S1 -- Lần đầu --> F1[Tính điểm\n1 câu = 10 chempoint]
+    S1 -- Lần đầu --> F1[Tính điểm<br>1 câu = 10 chempoint]
     F1 --> F2[Popup nhận chempoint]
     F2 --> F3[Kết thúc]
     
@@ -241,12 +233,12 @@ flowchart TD
     
     R1 -- Có --> B1{Lần làm lại thứ mấy?}
     
-    B1 -- Lần 2 --> C1[Tính chênh lệch\nchempoint mới - cũ]
+    B1 -- Lần 2 --> C1[Tính chênh lệch<br>chempoint mới - cũ]
     C1 --> C2[Nhận thêm = chênh lệch // 2]
     C2 --> C3[Popup nhận thêm chempoint]
     C3 --> C4[Kết thúc]
     
-    B1 -- Lần 3 --> D1[Tính chênh lệch\nchempoint mới - cũ]
+    B1 -- Lần 3 --> D1[Tính chênh lệch<br>chempoint mới - cũ]
     D1 --> D2[Nhận thêm = chênh lệch // 4]
     D2 --> D3[Popup nhận thêm chempoint]
     D3 --> D4[Kết thúc]
@@ -254,11 +246,6 @@ flowchart TD
     B1 -- Lần 4+ --> E1[Không nhận thêm chempoint]
     E1 --> E2[Popup đạt tối đa chempoint]
     E2 --> E3[Kết thúc]
-    
-    style Type fill:#e1f5fe,stroke:#01579b
-    style S1 fill:#e8f5e9,stroke:#2e7d32
-    style R1 fill:#fff3e0,stroke:#e65100
-    style B1 fill:#f3e5f5,stroke:#6a1b9a
 ```
 
 ---
