@@ -9,6 +9,10 @@ Tài liệu này tổng hợp tất cả các màn hình, popup và nội dung t
 - [I. Bảng Tổng Hợp Screen Theo Từng Loại Bài Tập](#i-bảng-tổng-hợp-screen-theo-từng-loại-bài-tập)
 - [II. Bảng Tổng Hợp Popup Theo Từng Loại Bài Tập](#ii-bảng-tổng-hợp-popup-theo-từng-loại-bài-tập)
 - [III. Sơ Đồ Tổng Hợp Theo Từng Loại Bài Tập](#iii-sơ-đồ-tổng-hợp-theo-từng-loại-bài-tập)
+  - [1. Sơ Đồ Cho Streak](#1-sơ-đồ-cho-streak)
+  - [2. Sơ Đồ Cho Homework](#2-sơ-đồ-cho-homework)
+  - [3. Sơ Đồ Cho Test](#3-sơ-đồ-cho-test)
+  - [4. Sơ Đồ Cho Practice](#4-sơ-đồ-cho-practice)
 - [IV. Chi Tiết Từng Màn Hình Và Popup](#iv-chi-tiết-từng-màn-hình-và-popup)
   - [1. STREAK (Làm 3 câu mỗi ngày)](#1-streak-làm-3-câu-mỗi-ngày)
   - [2. HOMEWORK (Bài tập theo lộ trình)](#2-homework-bài-tập-theo-lộ-trình)
@@ -41,16 +45,9 @@ Tài liệu này tổng hợp tất cả các màn hình, popup và nội dung t
 
 ## III. Sơ Đồ Tổng Hợp Theo Từng Loại Bài Tập
 
+### 1. Sơ Đồ Cho Streak
 ```mermaid
 flowchart TD
-    subgraph "Flow chung"
-        Start([Trang chủ]) --> Select{Chọn loại bài tập?}
-        Select -- Streak --> StreakFlow
-        Select -- Homework --> HomeworkFlow
-        Select -- Test --> TestFlow
-        Select -- Practice --> PracticeFlow
-    end
-    
     subgraph StreakFlow[Flow làm bài Streak]
         S1[Danh sách chuỗi\nStreak] --> S2[Làm bài\n3 câu]
         S2 --> S3[Kết quả\nĐiểm + Chempoint + Chuỗi]
@@ -60,7 +57,12 @@ flowchart TD
         S3 --> SP3{{Popup: Chuỗi streak}}:::popup
         style S1 fill:#e8f5e9,stroke:#2e7d32
     end
-    
+    classDef popup stroke:#ff9800,stroke-width:2px;
+```
+
+### 2. Sơ Đồ Cho Homework
+```mermaid
+flowchart TD
     subgraph HomeworkFlow[Flow làm bài Homework]
         H1[Danh sách bài tập\ntheo lộ trình] --> H2[Chọn mức độ\nDễ/TB/Khó]
         H2 --> H3[Làm bài\n10 câu]
@@ -72,7 +74,12 @@ flowchart TD
         H4 --> HP4{{Popup: Xem video liên quan}}:::popup
         style H1 fill:#fff3e0,stroke:#e65100
     end
-    
+    classDef popup stroke:#ff9800,stroke-width:2px;
+```
+
+### 3. Sơ Đồ Cho Test
+```mermaid
+flowchart TD
     subgraph TestFlow[Flow làm bài Test]
         T1[Danh sách\nbài thi thử] --> T2[Hướng dẫn\nluật thi]
         T2 --> T3[Làm bài\n60 câu có timer]
@@ -83,7 +90,12 @@ flowchart TD
         T4 --> TP3{{Popup: Phân tích kết quả}}:::popup
         style T1 fill:#f3e5f5,stroke:#6a1b9a
     end
-    
+    classDef popup stroke:#ff9800,stroke-width:2px;
+```
+
+### 4. Sơ Đồ Cho Practice
+```mermaid
+flowchart TD
     subgraph PracticeFlow[Flow làm bài Practice]
         P1[Danh sách\ntheo chủ đề] --> P2[Chọn chủ đề\ndạng bài]
         P2 --> P3[Làm bài\nKhông giới hạn]
@@ -93,7 +105,6 @@ flowchart TD
         P4 --> PP2{{Popup: Gợi ý dạng bài khác}}:::popup
         style P1 fill:#e1f5fe,stroke:#01579b
     end
-    
     classDef popup stroke:#ff9800,stroke-width:2px;
 ```
 
